@@ -65,8 +65,8 @@ def main():
         
     for x in range(NumberStart, NumberEnd, 2):
         
-        PageEntry1 = int(x)
-        PageEntry2 = int(x) + 1
+        PageEntry1 = str(x)
+        PageEntry2 = str(int(x) + 1)
 
         #16 tabs
                 #enter
@@ -90,18 +90,18 @@ def main():
         pyautogui.click(x=1471, y=977)
 
         pyautogui.press('tab')
-        print(PageEntry1)
         pyautogui.typewrite(PageEntry1)
         pyautogui.press('tab')
         pyautogui.typewrite(PageEntry2)
         pyautogui.press('tab')
         pyautogui.press('enter')
-        time.sleep(7)
-        pyautogui.press('tab', 16, interval = 0.1)
+        time.sleep(20)
+
+        pyautogui.click(x=1771, y=238)
 
         pyautogui.press('enter', presses = 2, interval = 0.55)
         time.sleep(0.5)
-        pyautogui.typewrite(PageEntry1 + "_" + PageEntry2 + ".pdf", interval = 0.50)
+        pyautogui.typewrite(PageEntry1 + "_" + PageEntry2 + ".pdf", interval = 0.20)
         time.sleep(0.2)
         pyautogui.press('enter')
         time.sleep(0.9)
@@ -118,7 +118,6 @@ def main():
         # pyautogui.typewrite("Ebook", interval = 0.50)
         # pyautogui.press('enter', interval = 0.5)
         time.sleep(0.25)
-        return
 
    
     print("\nDone!")
