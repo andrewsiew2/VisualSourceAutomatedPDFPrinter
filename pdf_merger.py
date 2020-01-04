@@ -13,11 +13,13 @@ def merge_pdfs(paths, output):
     # Write out the merged PDF
     with open(output, 'wb') as out:
         pdf_writer.write(out)
+        
+def comparator(filename):
+    return int(filename.split('\\')[1].split('_')[0])
 
 if __name__ == '__main__':
-    no_of_pages = 0
     dirname = r'./pdfs'
     files = glob.glob(dirname + r"/*.pdf")
-    files.sort()
+    files.sort(key = comparator)
     print(files)
     merge_pdfs(files, output='merged.pdf')
