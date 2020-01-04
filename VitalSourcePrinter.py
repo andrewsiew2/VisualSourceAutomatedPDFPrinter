@@ -88,24 +88,33 @@ def main():
 
         # pyautogui.press('tab', 16, interval = 0.1)
         pyautogui.click(x=1471, y=977)
-
+        pyautogui.moveTo(500, 500)
+        time.sleep(0.2)
         pyautogui.press('tab')
+        pyautogui.press('delete')
+        time.sleep(0.2)
         pyautogui.typewrite(PageEntry1)
+        time.sleep(0.2)
         pyautogui.press('tab')
+        pyautogui.press('delete')
+        time.sleep(0.2)
         pyautogui.typewrite(PageEntry2)
+        time.sleep(0.2)
         pyautogui.press('tab')
-        pyautogui.press('enter')
-        time.sleep(20)
-
-        pyautogui.click(x=1771, y=238)
-
-        pyautogui.press('enter', presses = 2, interval = 0.55)
-        time.sleep(0.5)
-        pyautogui.typewrite(PageEntry1 + "_" + PageEntry2 + ".pdf", interval = 0.20)
         time.sleep(0.2)
         pyautogui.press('enter')
-        time.sleep(0.9)
-        pyautogui.press('right', 2, interval = 0.1)
+
+        time.sleep(10)
+
+        pyautogui.click(x=1771, y=238)
+        time.sleep(1)
+        pyautogui.press('enter')
+        time.sleep(1)
+        print(PageEntry1 + "_" + PageEntry2)
+        pyautogui.press('delete')
+        pyautogui.typewrite(PageEntry1 + "_" + PageEntry2 + ".pdf")
+        time.sleep(0.2)
+        pyautogui.press('enter')
 
         # pyautogui.hotkey('ctrl', 'p')
         # pyautogui.press(keys = 'tab', presses = 2, interval = 0.25)
@@ -117,7 +126,7 @@ def main():
         # pyautogui.typewrite(['tab', 'tab', 'enter', 'enter'], interval = 0.25 )
         # pyautogui.typewrite("Ebook", interval = 0.50)
         # pyautogui.press('enter', interval = 0.5)
-        time.sleep(0.25)
+        time.sleep(0.70)
 
    
     print("\nDone!")
